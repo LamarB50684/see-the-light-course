@@ -1,1 +1,3 @@
-ZXhwb3J0IHsgQ2hhcHRlck9uZSwgQ2hhcHRlclR3byB9IGZyb20gIi4vY291cnNlLWNoLWEiCmV4cG9ydCB7IENoYXB0ZXJUaHJlZSwgQ2hhcHRlckZvdXIgfSBmcm9tICIuL2NvdXJzZS1jaC1iIgpleHBvcnQgeyBDaGFwdGVyRml2ZSwgQ2hhcHRlclNpeCwgQ2hhcHRlclNldmVuIH0gZnJvbSAiLi9jb3Vyc2UtY2gtYyIK
+export { ChapterOne, ChapterTwo } from "./course-ch-a"
+export { ChapterThree, ChapterFour } from "./course-ch-b"
+export { ChapterFive, ChapterSix, ChapterSeven } from "./course-ch-c"

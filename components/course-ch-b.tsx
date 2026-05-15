@@ -1,1 +1,370 @@
-aW1wb3J0IEltYWdlIGZyb20gIm5leHQvaW1hZ2UiCmltcG9ydCB7IENhbGxvdXQsIEtleUZhY3QgfSBmcm9tICJAL2NvbXBvbmVudHMvY2FsbG91dCIKaW1wb3J0IHsgQ2xvY2tEaWFncmFtLCBUcmlhbmdsZURpYWdyYW0sIENvbnRyYXN0Wm9uZUJhciwgS2VsdmluQmFyIH0gZnJvbSAiQC9jb21wb25lbnRzL2RpYWdyYW1zIgoKLy8g4pSA4pSAIEltYWdlIFVSTHMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmNvbnN0IElNRyA9IHsKICBoZXJvOiAiaHR0cHM6Ly9nYWxheHktcHJvZC50bGNkbi5jb20vZ2VuL3VzZXJfMzFpUGhBeVc0Z0kzM0NGcDJpVGVXZVR1bklvL2M5YWMyY2E4LTRmNzktNGQ4NC1iYjIyLTNkZGQyNjE2ZDA1Mi5qcGVnIiwKICBkaXJlY3Rpb246ICJodHRwczovL2dhbGF4eS1wcm9kLnRsY2RuLmNvbS9nZW4vdXNlcl8zMWlQaEF5VzRnSTMzQ0ZwMmlUZVdlVHVuSW8vZDExYTdmZTctNGQ0ZS00NzcwLTk4Y2ItYjVkMDZiNWRiZmM1LmpwZWciLAogIGNvbnRyYXN0OiAiaHR0cHM6Ly9nYWxheHktcHJvZC50bGNkbi5jb20vZ2VuL3VzZXJfMzFpUGhBeVc0Z0kzM0NGcDJpVGVXZVR1bklvL2U3NWQ0YjY2LTFiZTEtNDY2NC05ZGNhLWM4YTUwOGVjYjIzYS5qcGVnIiwKICBjb2xvcjogImh0dHBzOi8vZ2FsYXh5LXByb2QudGxjZG4uY29tL2dlbi91c2VyXzMxaVBoQXlXNGdJMzNDRnAyaVRlV2VUdW5Jby9hMTQxOGUzNi1jNmFhLTQwMTItYTM4MC02OTEzZWJiN2JjZjYuanBlZyIsCiAgaGFyZExpZ2h0OiAiaHR0cHM6Ly9nYWxheHktcHJvZC50bGNkbi5jb20vZ2VuL3VzZXJfMzFpUGhBeVc0Z0kzM0NGcDJpVGVXZVR1bklvLzBmZTNhN2RiLTM4ZDYtNDg2Ny04M2Y0LTA3MjVjMDczNTBhMi5qcGVnIiwKICBzb2Z0TGlnaHQ6ICJodHRwczovL2dhbGF4eS1wcm9kLnRsY2RuLmNvbS9nZW4vdXNlcl8zMWlQaEF5VzRnSTMzQ0ZwMmlUZVdlVHVuSW8vNmJjNTYxMDktYWRlOC00OWIwLWEyYWEtYjExM2I1MTdkZTI1LmpwZWciLAogIGJhY2tsaXQ6ICJodHRwczovL2dhbGF4eS1wcm9kLnRsY2RuLmNvbS9nZW4vdXNlcl8zMWlQaEF5VzRnSTMzQ0ZwMmlUZVdlVHVuSW8vMzdlODc2MDgtOWRiZS00YTc3LWI2MmQtODM3MDY2Njk0MjFjLmpwZWciLAogIHNjZW5lOiAiaHR0cHM6Ly9nYWxheHktcHJvZC50bGNkbi5jb20vZ2VuL3VzZXJfMzFpUGhBeVc0Z0kzM0NGcDJpVGVXZVR1bklvLzcxNWQzMzAyLThjMDAtNDJjZC1hNjg3LWEzOWI2NmU2ZDE5OS5qcGVnIiwKfQoKLy8g4pSA4pSAIFNoYXJlZCBzdWItY29tcG9uZW50cyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCmZ1bmN0aW9uIENoYXB0ZXJIZWFkZXIoewogIG51bWJlciwgdGl0bGUsIHN1YnRpdGxlLCBpbWFnZVVybCwKfTogeyBudW1iZXI6IHN0cmluZzsgdGl0bGU6IHN0cmluZzsgc3VidGl0bGU6IHN0cmluZzsgaW1hZ2VVcmw6IHN0cmluZyB9KSB7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJyZWxhdGl2ZSBoLVs0MjBweF0gbWQ6aC1bNTIwcHhdIGZsZXggaXRlbXMtZW5kIG92ZXJmbG93LWhpZGRlbiI+CiAgICAgIDxJbWFnZSBzcmM9e2ltYWdlVXJsfSBhbHQ9e3RpdGxlfSBmaWxsIGNsYXNzTmFtZT0ib2JqZWN0LWNvdmVyIiBzdHlsZT17eyBvcGFjaXR5OiAwLjM4IH19IHNpemVzPSIxMDB2dyIgLz4KICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTAgYmctZ3JhZGllbnQtdG8tdCBmcm9tLVsjMDgwODA4XSB2aWEtWyMwODA4MDhdLzYwIHRvLXRyYW5zcGFyZW50IiAvPgogICAgICA8ZGl2IGNsYXNzTmFtZT0icmVsYXRpdmUgei0xMCBweC04IG1kOnB4LTE2IHBiLTE0Ij4KICAgICAgICA8ZGl2CiAgICAgICAgICBjbGFzc05hbWU9InRleHQtWzEwcHhdIHRyYWNraW5nLVswLjRlbV0gdXBwZXJjYXNlIHRleHQtWyNDOUE4NENdIG1iLTQiCiAgICAgICAgICBzdHlsZT17eyBmb250RmFtaWx5OiAibW9ub3NwYWNlIiB9fQogICAgICAgID4KICAgICAgICAgIENoYXB0ZXIge251bWJlcn0KICAgICAgICA8L2Rpdj4KICAgICAgICA8aDIKICAgICAgICAgIGNsYXNzTmFtZT0iZm9udC1zZXJpZiB0ZXh0LTV4bCBtZDp0ZXh0LTZ4bCBsZzp0ZXh0LTd4bCBmb250LWxpZ2h0IHRleHQtWyNFOEUyRDldIGxlYWRpbmctWzEuMDVdIG1iLTMiCiAgICAgICAgPgogICAgICAgICAge3RpdGxlfQogICAgICAgIDwvaDI+CiAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LVsjN0E3NDcwXSB0ZXh0LWxnIGZvbnQtbGlnaHQgbWF4LXcteGwiPntzdWJ0aXRsZX08L3A+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKQp9CgpmdW5jdGlvbiBCb2R5KHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlIH0pIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InB4LTggbWQ6cHgtMTYgbGc6cHgtMjAgcHktMTYgbWF4LXctWzgyMHB4XSI+CiAgICAgIHtjaGlsZHJlbn0KICAgIDwvZGl2PgogICkKfQoKZnVuY3Rpb24gUCh7IGNoaWxkcmVuIH06IHsgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZSB9KSB7CiAgcmV0dXJuIDxwIGNsYXNzTmFtZT0idGV4dC1bMTYuNXB4XSB0ZXh0LVsjQjhCMkE5XSBsZWFkaW5nLVsxLjg1XSBtYi01Ij57Y2hpbGRyZW59PC9wPgp9CgpmdW5jdGlvbiBIMyh7IGNoaWxkcmVuIH06IHsgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZSB9KSB7CiAgcmV0dXJuICgKICAgIDxoMwogICAgICBjbGFzc05hbWU9ImZvbnQtc2VyaWYgdGV4dC0yeGwgbWQ6dGV4dC0zeGwgZm9udC1saWdodCB0ZXh0LVsjRThFMkQ5XSBtdC0xNCBtYi00IHBiLTMiCiAgICAgIHN0eWxlPXt7IGJvcmRlckJvdHRvbTogIjFweCBzb2xpZCAjMUExQTFBIiB9fQogICAgPgogICAgICB7Y2hpbGRyZW59CiAgICA8L2gzPgogICkKfQoKZnVuY3Rpb24gQXVkaXRTdGVwKHsgbnVtLCB0aXRsZSwgY2hpbGRyZW4gfTogeyBudW06IHN0cmluZzsgdGl0bGU6IHN0cmluZzsgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZSB9KSB7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGdhcC00IG1iLTYiPgogICAgICA8ZGl2CiAgICAgICAgY2xhc3NOYW1lPSJzaHJpbmstMCB3LTkgaC05IHJvdW5kZWQtZnVsbCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0ZXh0LVsxM3B4XSBmb250LWJvbGQgbXQtMC41IgogICAgICAgIHN0eWxlPXt7IGJhY2tncm91bmQ6ICJyZ2JhKDIwMSwxNjgsNzYsMC4xMCkiLCBjb2xvcjogIiNDOUE4NEMiLCBmb250RmFtaWx5OiAibW9ub3NwYWNlIiB9fQogICAgICA+CiAgICAgICAge251bX0KICAgICAgPC9kaXY+CiAgICAgIDxkaXY+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtWzE0cHhdIGZvbnQtc2VtaWJvbGQgdGV4dC1bI0U4RTJEOV0gbWItMSI+e3RpdGxlfTwvZGl2PgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LVsxNXB4XSB0ZXh0LVsjOEE4NDgwXSBsZWFkaW5nLXJlbGF4ZWQiPntjaGlsZHJlbn08L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApCn0KCmZ1bmN0aW9uIFNlY3Rpb25EaXZpZGVyKCkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0iYm9yZGVyLXQgYm9yZGVyLVsjMTExXSBteS0wIiAvPgogICkKfQoKZnVuY3Rpb24gT2JqZWN0aXZlcyh7IGl0ZW1zIH06IHsgaXRlbXM6IHN0cmluZ1tdIH0pIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9Im1iLTEyIHAtNiByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItWyMxODE4MThdIGJnLVsjMEEwQTBBXSI+CiAgICAgIDxkaXYKICAgICAgICBjbGFzc05hbWU9InRleHQtWzlweF0gdHJhY2tpbmctWzAuMzVlbV0gdXBwZXJjYXNlIHRleHQtWyMzQTNBM0FdIG1iLTQiCiAgICAgICAgc3R5bGU9e3sgZm9udEZhbWlseTogIm1vbm9zcGFjZSIgfX0KICAgICAgPgogICAgICAgIEluIHRoaXMgY2hhcHRlciB5b3Ugd2lsbCBsZWFybgogICAgICA8L2Rpdj4KICAgICAge2l0ZW1zLm1hcCgoaXRlbSwgaSkgPT4gKAogICAgICAgIDxkaXYga2V5PXtpfSBjbGFzc05hbWU9ImZsZXggaXRlbXMtc3RhcnQgZ2FwLTMgbWItMiI+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtWyNDOUE4NENdIG10LTAuNSB0ZXh0LXNtIj7il4Y8L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtWzE0cHhdIHRleHQtWyM4QTg0ODBdIGxlYWRpbmctcmVsYXhlZCI+e2l0ZW19PC9zcGFuPgogICAgICAgIDwvZGl2PgogICAgICApKX0KICAgIDwvZGl2PgogICkKfQoKLy8g4pSA4pSAIENIQVBURVIgVEhSRUUg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgpleHBvcnQgZnVuY3Rpb24gQ2hhcHRlclRocmVlKCkgewogIHJldHVybiAoCiAgICA8PgogICAgICA8Q2hhcHRlckhlYWRlcgogICAgICAgIG51bWJlcj0iMDMiCiAgICAgICAgdGl0bGU9IkNvbnRyYXN0IOKAlCBSZWFkaW5nIFNoYWRvdyBSYXRpb3MiCiAgICAgICAgc3VidGl0bGU9IlRoZSByYXRpbyB0aGF0IGNvbnRyb2xzIGRyYW1hLCBtb29kLCBhbmQgdGhlIGVtb3Rpb25hbCByZWdpc3RlciBvZiBldmVyeSBpbWFnZS4iCiAgICAgICAgaW1hZ2VVcmw9e0lNRy5jb250cmFzdH0KICAgICAgLz4KICAgICAgPEJvZHk+CiAgICAgICAgPE9iamVjdGl2ZXMKICAgICAgICAgIGl0ZW1zPXtbCiAgICAgICAgICAgICJJZGVudGlmeSBmb3VyIGNvbnRyYXN0IHpvbmVzIGJ5IG9ic2VydmF0aW9uIGFsb25lIiwKICAgICAgICAgICAgIkNvbnRyb2wgY29udHJhc3QgcmF0aW8gb24gbG9jYXRpb24gdXNpbmcgYXZhaWxhYmxlIHRvb2xzIiwKICAgICAgICAgICAgIk1hdGNoIGNvbnRyYXN0IGxldmVsIHRvIHRoZSBlbW90aW9uYWwgaW50ZW50IG9mIHRoZSBpbWFnZSIsCiAgICAgICAgICBdfQogICAgICAgIC8+CgogICAgICAgIDxQPgogICAgICAgICAgT25jZSB5b3UgaGF2ZSBlc3RhYmxpc2hlZCBkaXJlY3Rpb24sIHlvdXIgc2Vjb25kIHF1ZXN0aW9uIGlzOiBob3cgZHJhbWF0aWMgaXMgdGhlCiAgICAgICAgICBkaWZmZXJlbmNlIGJldHdlZW4gdGhlIGxpdCBhbmQgc2hhZG93IHNpZGVzPyBUaGlzIHJhdGlvIOKAlCB0aGUgbGlnaHRpbmcgcmF0aW8gb3IgY29udHJhc3QKICAgICAgICAgIHJhdGlvIOKAlCBkZXRlcm1pbmVzIHRoZSBlbW90aW9uYWwgdGVtcGVyYXR1cmUgb2YgdGhlIGltYWdlIG1vcmUgdGhhbiBhbnkgb3RoZXIgc2luZ2xlCiAgICAgICAgICB2YXJpYWJsZS4gSGlnaCBjb250cmFzdCByZWFkcyBhcyBkcmFtYXRpYywgZ3JpdHR5LCBhbmQgaW50ZW5zZS4gTG93IGNvbnRyYXN0IHJlYWRzIGFzCiAgICAgICAgICBzb2Z0LCBnZW50bGUsIGFuZCBhcHByb2FjaGFibGUuCiAgICAgICAgPC9QPgoKICAgICAgICA8Q29udHJhc3Rab25lQmFyIC8+CgogICAgICAgIDxIMz5Ib3cgdG8gUmVhZCBDb250cmFzdDwvSDM+CiAgICAgICAgPFA+CiAgICAgICAgICBNb3N0IHBob3RvZ3JhcGhlcnMgaW5zdGluY3RpdmVseSBsb29rIGF0IHRoZSBoaWdobGlnaHRzLiBJbnZlcnQgdGhpcyBoYWJpdCBjb21wbGV0ZWx5LgogICAgICAgICAgVGhlIHNoYWRvdyBzaWRlIHRlbGxzIHlvdSBldmVyeXRoaW5nLiBXaGVuIHlvdSBhc3Nlc3MgYSBzY2VuZSwgbG9vayBzcGVjaWZpY2FsbHkgYXQgdGhlCiAgICAgICAgICBkYXJrZXN0IGFyZWEgb2YgeW91ciBzdWJqZWN0IGFuZCBhc2sgdHdvIHF1ZXN0aW9uczogQ2FuIHlvdSBzZWUgZGV0YWlsIHRoZXJlPyBBbmQgaG93CiAgICAgICAgICBkb2VzIGl0IGNvbXBhcmUgaW4gYnJpZ2h0bmVzcyB0byB0aGUgbGl0IHNpZGU/CiAgICAgICAgPC9QPgoKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBtZDpncmlkLWNvbHMtMiBnYXAtNCBteS04Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIG92ZXJmbG93LWhpZGRlbiByZWxhdGl2ZSBoLVsyNjBweF0iPgogICAgICAgICAgICA8SW1hZ2Ugc3JjPXtJTUcuaGFyZExpZ2h0fSBhbHQ9IkhhcmQgbGlnaHQgd2l0aCBzaGFycCBzaGFkb3dzIiBmaWxsIGNsYXNzTmFtZT0ib2JqZWN0LWNvdmVyIiBzaXplcz0iNTB2dyIgLz4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTAgYmctZ3JhZGllbnQtdG8tdCBmcm9tLWJsYWNrLzcwIHRvLXRyYW5zcGFyZW50IiAvPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgYm90dG9tLTAgbGVmdC0wIHAtNCI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtWzEwcHhdIGZvbnQtbW9ubyBmb250LWJvbGQgdGV4dC1bI0UwOUI2Ql0gdHJhY2tpbmctd2lkZXIgbWItMSI+SEFSRCBMSUdIVDwvZGl2PgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LVsxMnB4XSB0ZXh0LVsjRThFMkQ5XSI+U2hhcnAgc2hhZG93IGVkZ2VzLCBoaWdoIGxvY2FsIGNvbnRyYXN0PC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBvdmVyZmxvdy1oaWRkZW4gcmVsYXRpdmUgaC1bMjYwcHhdIj4KICAgICAgICAgICAgPEltYWdlIHNyYz17SU1HLnNvZnRMaWdodH0gYWx0PSJTb2Z0IGxpZ2h0IHdpdGggZ2VudGxlIHNoYWRvd3MiIGZpbGwgY2xhc3NOYW1lPSJvYmplY3QtY292ZXIiIHNpemVzPSI1MHZ3IiAvPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgaW5zZXQtMCBiZy1ncmFkaWVudC10by10IGZyb20tYmxhY2svNzAgdG8tdHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJhYnNvbHV0ZSBib3R0b20tMCBsZWZ0LTAgcC00Ij4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1bMTBweF0gZm9udC1tb25vIGZvbnQtYm9sZCB0ZXh0LVsjNkJBRThCXSB0cmFja2luZy13aWRlciBtYi0xIj5TT0ZUIExJR0hUPC9kaXY+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtWzEycHhdIHRleHQtWyNFOEUyRDldIj5HcmFkdWFsIHRyYW5zaXRpb25zLCBmbGF0dGVyaW5nIGdyYWR1YXRpb248L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPEgzPlRoZSBGb3VyIENvbnRyYXN0IFpvbmVzPC9IMz4KCiAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktNCI+CiAgICAgICAgICB7WwogICAgICAgICAgICB7IHpvbmU6ICJab25lIDEg4oCUIDE6MSBGbGF0IiwgY29sb3I6ICIjNkJBRThCIiwgZGVzYzogIk5vIG1lYW5pbmdmdWwgc2hhZG93cy4gTGlnaHQgY29tZXMgZnJvbSBhbGwgZGlyZWN0aW9ucyBlcXVhbGx5LiBPdmVyY2FzdCBkYXlzLCBvcGVuIHNoYWRlLCBvciBsYXJnZSBzb2Z0Ym94ZXMgdmVyeSBjbG9zZSB0byBzdWJqZWN0LiBVc2UgZm9yIGNsZWFuIGNvbW1lcmNpYWwgYmVhdXR5LCBoaWdoLWtleSBhZXN0aGV0aWNzLCBhbmQgbGlmZXN0eWxlIGltYWdlcnkgd2hlcmUgc2hhZG93IHdvdWxkIGNvbXBldGUgd2l0aCBhIGJ1c3kgc2NlbmUuIiB9LAogICAgICAgICAgICB7IHpvbmU6ICJab25lIDIg4oCUIDI6MSBHZW50bGUgTW9kZWxpbmciLCBjb2xvcjogIiNDOUE4NEMiLCBkZXNjOiAiVmlzaWJsZSBzaGFkb3cgd2l0aCBmdWxsIGRldGFpbCB0aHJvdWdob3V0LiBUaGUgbW9zdCBjb21tb24gJ25hdHVyYWwnIHBvcnRyYWl0IHJhdGlvIOKAlCBwcm9kdWNlcyB0aGUgc2Vuc2Ugb2YgdGhyZWUtZGltZW5zaW9uYWxpdHkgd2l0aG91dCBkcmFtYS4gTW9zdCBnb2xkZW4taG91ciBvdXRkb29yIHBvcnRyYWl0cyBuYXR1cmFsbHkgbGFuZCBpbiB0aGlzIHpvbmUuIENvbW1lcmNpYWxseSBzYWZlIGFuZCB1bml2ZXJzYWxseSBmbGF0dGVyaW5nLiIgfSwKICAgICAgICAgICAgeyB6b25lOiAiWm9uZSAzIOKAlCA0OjEgRHJhbWF0aWMiLCBjb2xvcjogIiNFMDlCNkIiLCBkZXNjOiAiVGhlIHNoYWRvdyBzaWRlIGRyb3BzIHJvdWdobHkgdHdvIHN0b3BzIGJlbG93IHRoZSBoaWdobGlnaHRzLiBEZXRhaWwgZXhpc3RzIGluIHNoYWRvd3MgYnV0IHJlcXVpcmVzIGF0dGVudGlvbi4gVGhpcyBpcyB3aGVyZSBlZGl0b3JpYWwgcG9ydHJhaXR1cmUgYmVnaW5zIOKAlCBzdHJvbmcgZGVwdGgsIGNoYXJhY3RlciwgYW5kIHByZXNlbmNlLiBTdGlsbCBjb21tZXJjaWFsbHkgdmlhYmxlIGZvciBsaWZlc3R5bGUgYW5kIGZhc2hpb24uIiB9LAogICAgICAgICAgICB7IHpvbmU6ICJab25lIDQg4oCUIDg6MSsgSGlnaCBEcmFtYSIsIGNvbG9yOiAiI0UwNkI2QiIsIGRlc2M6ICJTaGFkb3cgc2lkZSBpcyB0aHJlZSBvciBtb3JlIHN0b3BzIGJlbG93IGhpZ2hsaWdodHMuIFNoYWRvdyBkZXRhaWwgaXMgbGFyZ2VseSBsb3N0LiBJbnRlbnRpb25hbCBhbmQgdW5jb21wcm9taXNpbmcuIFVzZWQgaW4gZmluZSBhcnQsIGRhcmsgZWRpdG9yaWFsLCBhbmQgZmFzaGlvbi4gTm90IGZvciBnZW5lcmFsIGNvbW1lcmNpYWwgdXNlIOKAlCByZXF1aXJlcyBpbnRlbnRpb25hbGl0eSBhbmQgZWRpdG9yaWFsIGNvbnRleHQgdG8gcmVhZCBhcyBza2lsbGVkIHJhdGhlciB0aGFuIGZhaWxlZC4iIH0sCiAgICAgICAgICBdLm1hcCgoaXRlbSkgPT4gKAogICAgICAgICAgICA8ZGl2IGtleT17aXRlbS56b25lfSBjbGFzc05hbWU9InAtNCByb3VuZGVkLWxnIGJvcmRlciBib3JkZXItWyMxODE4MThdIgogICAgICAgICAgICAgIHN0eWxlPXt7IGJhY2tncm91bmQ6IGAke2l0ZW0uY29sb3J9MDVgIH19PgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LVsxMnB4XSBmb250LXNlbWlib2xkIG1iLTIiIHN0eWxlPXt7IGNvbG9yOiBpdGVtLmNvbG9yLCBmb250RmFtaWx5OiAibW9ub3NwYWNlIiB9fT4KICAgICAgICAgICAgICAgIHtpdGVtLnpvbmV9CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LVsxNHB4XSB0ZXh0LVsjN0E3NDcwXSBsZWFkaW5nLXJlbGF4ZWQiPntpdGVtLmRlc2N9PC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICkpfQogICAgICAgIDwvZGl2PgoKICAgICAgICA8SDM+Q29udHJvbGxpbmcgQ29udHJhc3Qgb24gTG9jYXRpb248L0gzPgogICAgICAgIDxQPgogICAgICAgICAgWW91IGhhdmUgbW9yZSBjb250cm9sIG92ZXIgY29udHJhc3QgdGhhbiBtb3N0IGJlZ2lubmVycyByZWFsaXplLiBUaGUga2V5IHRvb2xzIGFyZSBwb3NpdGlvbiwKICAgICAgICAgIHJlZmxlY3Rpb24sIGFuZCBvY2NsdXNpb24uCiAgICAgICAgPC9QPgoKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBtZDpncmlkLWNvbHMtMiBnYXAtNiBteS02Ij4KICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LVsxMXB4XSBmb250LW1vbm8gdGV4dC1bIzZCQUU4Ql0gdHJhY2tpbmctd2lkZXN0IG1iLTMiPlRPIFJFRFVDRSBDT05UUkFTVDwvZGl2PgogICAgICAgICAgICA8dWwgY2xhc3NOYW1lPSJzcGFjZS15LTIiPgogICAgICAgICAgICAgIHtbCiAgICAgICAgICAgICAgICAiTW92ZSBzdWJqZWN0IGludG8gb3BlbiBzaGFkZSAoc2t5IGJlY29tZXMgdGhlIGZpbGwpIiwKICAgICAgICAgICAgICAgICJBZGQgYSByZWZsZWN0b3Igb24gdGhlIHNoYWRvdyBzaWRlIHRvIGJvdW5jZSBmaWxsIiwKICAgICAgICAgICAgICAgICJQb3NpdGlvbiBuZWFyIGEgYnJpZ2h0IHdhbGwgb3IgZ3JvdW5kIHRoYXQgYm91bmNlcyB1cHdhcmQiLAogICAgICAgICAgICAgICAgIlVzZSBzdWJ0bGUgZmlsbCBmbGFzaCBiYWxhbmNlZCAx4oCTMiBzdG9wcyBiZWxvdyBhbWJpZW50IiwKICAgICAgICAgICAgICBdLm1hcCgoaXRlbSwgaSkgPT4gKAogICAgICAgICAgICAgICAgPGxpIGtleT17aX0gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLXN0YXJ0IGdhcC0yIHRleHQtWzE0cHhdIHRleHQtWyM3QTc0NzBdIj4KICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LVsjNkJBRThCXSBtdC0xIj7igLo8L3NwYW4+e2l0ZW19CiAgICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICAgICkpfQogICAgICAgICAgICA8L3VsPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1bMTFweF0gZm9udC1tb25vIHRleHQtWyNFMDZCNkJdIHRyYWNraW5nLXdpZGVzdCBtYi0zIj5UTyBJTkNSRUFTRSBDT05UUkFTVDwvZGl2PgogICAgICAgICAgICA8dWwgY2xhc3NOYW1lPSJzcGFjZS15LTIiPgogICAgICAgICAgICAgIHtbCiAgICAgICAgICAgICAgICAiTW92ZSBzdWJqZWN0IGZhcnRoZXIgZnJvbSBhbnkgZmlsbCBzb3VyY2UiLAogICAgICAgICAgICAgICAgIkJsb2NrIGFtYmllbnQgb24gc2hhZG93IHNpZGUgd2l0aCBhIGRhcmsgcGFuZWwgKG5lZ2F0aXZlIGZpbGwpIiwKICAgICAgICAgICAgICAgICJVc2UgYSBzbWFsbGVyIHdpbmRvdyBvciBzZXQgdGhlIGJvdW5jZSBhbmdsZSIsCiAgICAgICAgICAgICAgICAiUG9zaXRpb24gc3ViamVjdCBjbG9zZXIgdG8gbGlnaHQgd2hpbGUga2VlcGluZyBmaWxsIGRpc3RhbnQiLAogICAgICAgICAgICAgIF0ubWFwKChpdGVtLCBpKSA9PiAoCiAgICAgICAgICAgICAgICA8bGkga2V5PXtpfSBjbGFzc05hbWU9ImZsZXggaXRlbXMtc3RhcnQgZ2FwLTIgdGV4dC1bMTRweF0gdGV4dC1bIzdBNzQ3MF0iPgogICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtWyNFMDZCNkJdIG10LTEiPuKAujwvc3Bhbj57aXRlbX0KICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgIDwvdWw+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPENhbGxvdXQgdHlwZT0icHJpbmNpcGxlIj4KICAgICAgICAgIEhpZ2ggY29udHJhc3QgaXMgbm90IGJhZCBhbmQgbG93IGNvbnRyYXN0IGlzIG5vdCBnb29kLiBUaGV5IGFyZSB0b29scy4gVGhlIGZhaWx1cmUKICAgICAgICAgIGlzIGhhdmluZyBvbmUgd2l0aG91dCBpbnRlbmRpbmcgaXQg4oCUIGNhcHR1cmluZyBoaWdoIGNvbnRyYXN0IGJlY2F1c2UgeW91IGRpZCBub3Qga25vdwogICAgICAgICAgaG93IHRvIHJlZHVjZSBpdCwgb3IgZ2V0dGluZyBmbGF0IGxpZ2h0IGJlY2F1c2UgeW91IGRpZCBub3Qga25vdyBob3cgdG8gYWRkIGRlcHRoLgogICAgICAgICAgSW50ZW50IGlzIGV2ZXJ5dGhpbmcuCiAgICAgICAgPC9DYWxsb3V0PgogICAgICA8L0JvZHk+CiAgICAgIDxTZWN0aW9uRGl2aWRlciAvPgogICAgPC8+CiAgKQp9CgovLyDilIDilIAgQ0hBUFRFUiBGT1VSIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKZXhwb3J0IGZ1bmN0aW9uIENoYXB0ZXJGb3VyKCkgewogIHJldHVybiAoCiAgICA8PgogICAgICA8Q2hhcHRlckhlYWRlcgogICAgICAgIG51bWJlcj0iMDQiCiAgICAgICAgdGl0bGU9IkNvbG9yIOKAlCBSZWFkaW5nIExpZ2h0IFRlbXBlcmF0dXJlIgogICAgICAgIHN1YnRpdGxlPSJFdmVyeSBzb3VyY2Ugb2YgbGlnaHQgaGFzIGNvbG9yLiBMZWFybmluZyB0byByZWFkIGl0IGNoYW5nZXMgZXZlcnl0aGluZy4iCiAgICAgICAgaW1hZ2VVcmw9e0lNRy5jb2xvcn0KICAgICAgLz4KICAgICAgPEJvZHk+CiAgICAgICAgPE9iamVjdGl2ZXMKICAgICAgICAgIGl0ZW1zPXtbCiAgICAgICAgICAgICJSZWFkIGNvbG9yIHRlbXBlcmF0dXJlIGJ5IGV5ZSBhY3Jvc3MgdGhlIGtleSBwaG90b2dyYXBoaWMgcmFuZ2UiLAogICAgICAgICAgICAiSWRlbnRpZnkgYW5kIHVzZSB0aGUgdGhyZWUgbW9zdCBpbXBvcnRhbnQgbmF0dXJhbCBsaWdodCB3aW5kb3dzIiwKICAgICAgICAgICAgIlJlY29nbml6ZSBhbmQgcmVzb2x2ZSBtaXhlZCBsaWdodCBzaXR1YXRpb25zIGJlZm9yZSB0aGV5IGFwcGVhciBpbiB5b3VyIGZyYW1lIiwKICAgICAgICAgIF19CiAgICAgICAgLz4KCiAgICAgICAgPFA+CiAgICAgICAgICBBbGwgbGlnaHQgaGFzIGNvbG9yLiBUaGlzIGlzIG5vdCBhIGZsYXcgaW4gc29tZSBzb3VyY2VzIGFuZCBhIGZlYXR1cmUgaW4gb3RoZXJzIOKAlCBpdCBpcyBhCiAgICAgICAgICBmdW5kYW1lbnRhbCBwaHlzaWNhbCBwcm9wZXJ0eSBvZiBlbGVjdHJvbWFnbmV0aWMgcmFkaWF0aW9uLiBMZWFybmluZyB0byByZWFkIGl0IGlzIGxlYXJuaW5nCiAgICAgICAgICB0byByZWFkIHRoZSByb29tLiBUaGUgY29sb3Igb2YgbGlnaHQgc2hhcGVzIHNraW4gdG9uZXMsIG1vb2QsIGFuZCB0aGUgZW50aXJlIGVtb3Rpb25hbAogICAgICAgICAgcGFsZXR0ZSBvZiB5b3VyIGltYWdlLiBJZ25vcmluZyBpdCBpcyBsaWtlIGNvbXBvc2luZyB3aXRoIHlvdXIgZXllcyBoYWxmLWNsb3NlZC4KICAgICAgICA8L1A+CgogICAgICAgIDxLZWx2aW5CYXIgLz4KCiAgICAgICAgPEgzPlRoZSBLZWx2aW4gU2NhbGUgZm9yIFBob3RvZ3JhcGhlcnM8L0gzPgogICAgICAgIDxQPgogICAgICAgICAgQ29sb3IgdGVtcGVyYXR1cmUgaXMgbWVhc3VyZWQgaW4gS2VsdmluLiBMb3dlciBudW1iZXJzIGFyZSB3YXJtZXIgKG9yYW5nZSwgYW1iZXIpLiBIaWdoZXIKICAgICAgICAgIG51bWJlcnMgYXJlIGNvb2xlciAoYmx1ZSwgY3lhbikuIFRoZSByZWxhdGlvbnNoaXAgaXMgY291bnRlci1pbnR1aXRpdmUgdG8gYmVnaW5uZXJzLCBidXQKICAgICAgICAgIGl0IGJlY29tZXMgc2Vjb25kIG5hdHVyZSBxdWlja2x5OiAyNzAwSyBpcyB5b3VyIGdyYW5kbW90aGVyJmFwb3M7cyBsYW1wOyA2NTAwSyBpcyBhCiAgICAgICAgICBjbG91ZHkgZ3JheSBza3k7IDEwLDAwMEsgaXMgYmx1ZSBtaWRkYXkgc2hhZGUuCiAgICAgICAgPC9QPgoKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0zIG15LTgiPgogICAgICAgICAge1sKICAgICAgICAgICAgeyByYW5nZTogIjE5MDDigJMyNTAwSyIsIG5hbWU6ICJDYW5kbGUgLyBGbGFtZSIsIGZlZWw6ICJEZWVwIGFtYmVyLW9yYW5nZS4gSW50aW1hdGUgYW5kIGRhbmdlcm91cy4gQWxtb3N0IGNpbmVtYXRpYyBpbiB3YXJtdGguIiwgZXg6ICJGaXJlcGxhY2UsIGNhbmRsZSwgZmxhbWUiIH0sCiAgICAgICAgICAgIHsgcmFuZ2U6ICIyNzAw4oCTMzIwMEsiLCBuYW1lOiAiVHVuZ3N0ZW4gLyBJbmNhbmRlc2NlbnQiLCBmZWVsOiAiV2FybSBvcmFuZ2UteWVsbG93LiBDbGFzc2ljIGludGVyaW9yIGRvbWVzdGljIGxpZ2h0LiBGbGF0dGVyaW5nIG9uIHdhcm0gc2tpbiB0b25lcy4iLCBleDogIkhvdXNlaG9sZCBidWxicywgcmVzdGF1cmFudCBsaWdodGluZyIgfSwKICAgICAgICAgICAgeyByYW5nZTogIjM1MDDigJM0MjAwSyIsIG5hbWU6ICJXYXJtIExFRCAvIExvd2VyIEdvbGRlbiBIb3VyIiwgZmVlbDogIldhcm0gdG8gbmV1dHJhbC4gVGhlIGJlZ2lubmluZyBvZiB0aGUgbWFnaWMgd2luZG93LiBDb21tZXJjaWFsIGFuZCB1bml2ZXJzYWxseSBmbGF0dGVyaW5nLiIsIGV4OiAiR29sZGVuIGhvdXIgc3RhcnQsIHdhcm0gTEVEIHBhbmVscyIgfSwKICAgICAgICAgICAgeyByYW5nZTogIjUwMDDigJM1NTAwSyIsIG5hbWU6ICJEYXlsaWdodCAvIEVsZWN0cm9uaWMgRmxhc2giLCBmZWVsOiAiV2hpdGUsIG5ldXRyYWwuIFRoZSBjYWxpYnJhdGlvbiByZWZlcmVuY2UgcG9pbnQuIFlvdXIgY2FtZXJhJ3MgQVdCIHRhcmdldHMgdGhpcyByYW5nZS4iLCBleDogIk1pZGRheSBzdW4sIHN0dWRpbyBmbGFzaCIgfSwKICAgICAgICAgICAgeyByYW5nZTogIjYwMDDigJM2NTAwSyIsIG5hbWU6ICJPdmVyY2FzdCAvIE9wZW4gU2hhZGUiLCBmZWVsOiAiU2xpZ2h0IGJsdWUgY2FzdC4gQ2xlYW4gYW5kIG1vZGVybi4gV29ya3MgZm9yIGNvb2wgZmFzaGlvbiBhZXN0aGV0aWNzLiIsIGV4OiAiQ2xvdWR5IGRheXMsIHNoYWRlZCBvdXRkb29yIGFyZWFzIiB9LAogICAgICAgICAgICB7IHJhbmdlOiAiNzAwMOKAkzEwMDAwSyIsIG5hbWU6ICJCbHVlIFNreSAvIERlZXAgU2hhZGUiLCBmZWVsOiAiRGlzdGluY3RseSBibHVlLCBjb2xkLCBhdG1vc3BoZXJpYy4gTWVsYW5jaG9saWMgb3IgZnV0dXJpc3RpYyBkZXBlbmRpbmcgb24gdXNlLiIsIGV4OiAiU2t5LWxpdCBzaGFkZSwgYmx1ZSBob3VyIiB9LAogICAgICAgICAgXS5tYXAoKGl0ZW0pID0+ICgKICAgICAgICAgICAgPGRpdiBrZXk9e2l0ZW0ucmFuZ2V9IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtWzEyMHB4XzFmcl0gZ2FwLTQgcHktMyBib3JkZXItYiBib3JkZXItWyMxNDE0MTRdIj4KICAgICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtWzExcHhdIGZvbnQtbW9ubyB0ZXh0LVsjQzlBODRDXSI+e2l0ZW0ucmFuZ2V9PC9kaXY+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1bMTJweF0gdGV4dC1bIzVBNTU1MF0gbXQtMC41Ij57aXRlbS5uYW1lfTwvZGl2PgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtWzE0cHhdIHRleHQtWyM4QTg0ODBdIGxlYWRpbmctcmVsYXhlZCI+e2l0ZW0uZmVlbH08L3A+CiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtWzEycHhdIHRleHQtWyM0QTRBNEFdIG10LTEiPmUuZy4ge2l0ZW0uZXh9PC9wPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICkpfQogICAgICAgIDwvZGl2PgoKICAgICAgICA8SDM+VGhlIFRocmVlIE5hdHVyYWwgTGlnaHQgV2luZG93czwvSDM+CgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTYgbXktOCI+CiAgICAgICAgICB7WwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgbmFtZTogIkdvbGRlbiBIb3VyIiwKICAgICAgICAgICAgICB0aW1lOiAiMzDigJM0NSBtaW4gYWZ0ZXIgc3VucmlzZSAvIGJlZm9yZSBzdW5zZXQiLAogICAgICAgICAgICAgIHRlbXA6ICIyNTAw4oCTMzUwMEsiLAogICAgICAgICAgICAgIGNvbG9yOiAiI0M5QTg0QyIsCiAgICAgICAgICAgICAgZGVzYzogIlRoZSBob3VyIGV2ZXJ5IHBob3RvZ3JhcGhlciBjaGFzZXMgZm9yIGdvb2QgcmVhc29uLiBUaGUgc291cmNlIGlzIGF0IGl0cyBsb3dlc3QgYW5nbGUgaW4gdGhlIHNreSwgcHJvZHVjaW5nIGxvbmcgcmFraW5nIHNoYWRvd3MgdGhhdCByZXZlYWwgZm9ybSwgYW5kIHdhcm10aCB0aGF0IGZsYXR0ZXJzIGV2ZXJ5IHNraW4gdG9uZS4gQ29udHJhc3QgaXMgbWFuYWdlYWJsZSDigJQgdGhlIGxvdyBzdW4gY3JlYXRlcyBsb25nIHNvZnQgc2hhZG93cyByYXRoZXIgdGhhbiBoYXJzaCB2ZXJ0aWNhbCBvbmVzLiBUaGUgY2F0Y2g6IGl0IGxhc3RzIDMw4oCTNDUgbWludXRlcywgaXQgbW92ZXMgZmFzdCwgYW5kIHlvdSBtdXN0IGFycml2ZSBlYXJseS4gU2NvdXQgYmVmb3JlLCBzaG9vdCBkdXJpbmcuIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgIG5hbWU6ICJCbHVlIEhvdXIiLAogICAgICAgICAgICAgIHRpbWU6ICIyMOKAkzMwIG1pbiBiZWZvcmUgc3VucmlzZSAvIGFmdGVyIHN1bnNldCIsCiAgICAgICAgICAgICAgdGVtcDogIjcwMDDigJMxMDAwMEsiLAogICAgICAgICAgICAgIGNvbG9yOiAiIzZCOUFFMCIsCiAgICAgICAgICAgICAgZGVzYzogIk5vIGRpcmVjdCBzdW4sIGJ1dCB0aGUgc2t5IHJlbWFpbnMgYWN0aXZlIOKAlCBkZWVwIGJsdWUsIGV2ZW4sIGFuZCBhdG1vc3BoZXJpYy4gQ29udHJhc3QgY29sbGFwc2VzIGFsbW9zdCBlbnRpcmVseS4gVGhpcyBpcyB0aGUgbW9zdCB1bmRlcnVzZWQgd2luZG93IGJ5IGludGVybWVkaWF0ZSBwaG90b2dyYXBoZXJzIGFuZCBwcm9kdWNlcyBpbWFnZXMgdGhhdCBmZWVsIGNpbmVtYXRpYyBhbmQgbXlzdGVyaW91cy4gQmVjYXVzZSB0aGUgbGlnaHQgaXMgc28gZGlmZnVzZSBhbmQgZXZlbiwgY29udmVudGlvbmFsIHBvc2l0aW9uIHJ1bGVzIG1hdHRlciBsZXNzLiBXaGF0IG1hdHRlcnMgbW9yZTogZXhwb3N1cmUsIGRlcHRoLCBhbmQgdGhlIGJhbGFuY2UgYmV0d2VlbiBhbWJpZW50IGFuZCBhbnkgYXJ0aWZpY2lhbCBzb3VyY2VzIGluIHRoZSBmcmFtZS4iLAogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgbmFtZTogIk1pZGRheSIsCiAgICAgICAgICAgICAgdGltZTogIjEwYW3igJMzcG0gKGNsZWFyIHNreSkiLAogICAgICAgICAgICAgIHRlbXA6ICI1NTAw4oCTNjUwMEsiLAogICAgICAgICAgICAgIGNvbG9yOiAiI0UwOUI2QiIsCiAgICAgICAgICAgICAgZGVzYzogIk5ldXRyYWwgdG8gY29vbCwgbmVhci12ZXJ0aWNhbCwgaGlnaC1jb250cmFzdC4gVGhlIGhhcmRlc3QgbGlnaHQgZm9yIHBvcnRyYWl0cy4gVmVydGljYWwgYW5nbGUgY3JlYXRlcyBkZWVwIGV5ZSBzb2NrZXQgc2hhZG93cywgZG91YmxlIGNoaW5zLCBhbmQgJ3JhY2Nvb24gZXllcy4nIFRoZSBjb2xvciBpcyBjbGluaWNhbC4gWW91ciBzdHJhdGVnaWVzOiBmaW5kIG9wZW4gc2hhZGUgKG5vcnRoLWZhY2luZyB3YWxscywgY292ZXJlZCB3YWxrd2F5cywgb3ZlcmhhbmcpLCB1c2UgdGFsbCBzdHJ1Y3R1cmVzIHRvIGJsb2NrIG92ZXJoZWFkIGxpZ2h0IGFuZCBleHBvc2UgdGhlIGZhY2UgdG8gcmVmbGVjdGVkIHdhbGwgbGlnaHQsIG9yIGxlYW4gaW50byB0aGUgaGFyc2huZXNzIGRlbGliZXJhdGVseSBmb3IgZ3JpdHR5IGVkaXRvcmlhbCB3b3JrLiIsCiAgICAgICAgICAgIH0sCiAgICAgICAgICBdLm1hcCgoaXRlbSkgPT4gKAogICAgICAgICAgICA8ZGl2IGtleT17aXRlbS5uYW1lfSBjbGFzc05hbWU9InAtNiByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItWyMxODE4MThdIgogICAgICAgICAgICAgIHN0eWxlPXt7IGJvcmRlckNvbG9yOiBgJHtpdGVtLmNvbG9yfTIwYCB9fT4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1zdGFydCBqdXN0aWZ5LWJldHdlZW4gbWItMyI+CiAgICAgICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1bMTNweF0gZm9udC1ib2xkIiBzdHlsZT17eyBjb2xvcjogaXRlbS5jb2xvciB9fT57aXRlbS5uYW1lfTwvZGl2PgogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1bMTJweF0gdGV4dC1bIzRBNEE0QV0gbXQtMC41Ij57aXRlbS50aW1lfTwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1bMTFweF0gZm9udC1tb25vIHB4LTIgcHktMSByb3VuZGVkIgogICAgICAgICAgICAgICAgICBzdHlsZT17eyBiYWNrZ3JvdW5kOiBgJHtpdGVtLmNvbG9yfTE1YCwgY29sb3I6IGl0ZW0uY29sb3IgfX0+CiAgICAgICAgICAgICAgICAgIHtpdGVtLnRlbXB9CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtWzE0cHhdIHRleHQtWyM3QTc0NzBdIGxlYWRpbmctcmVsYXhlZCI+e2l0ZW0uZGVzY308L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgKSl9CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxIMz5NaXhlZCBMaWdodCDigJQgVGhlIERhbmdlciBab25lPC9IMz4KICAgICAgICA8UD4KICAgICAgICAgIE1peGVkIGxpZ2h0IG9jY3VycyB3aGVuIHR3byBzb3VyY2VzIG9mIGRpZmZlcmVudCB0ZW1wZXJhdHVyZXMgaWxsdW1pbmF0ZSB5b3VyIHN1YmplY3QKICAgICAgICAgIHNpbXVsdGFuZW91c2x5LiBUaGUgbW9zdCBjb21tb24gc2NlbmFyaW86IGFuIGludGVyaW9yIHJvb20gd2hlcmUgdHVuZ3N0ZW4gbGFtcHMgKDMyMDBLLAogICAgICAgICAgb3JhbmdlKSBhbmQgYSBkYXlsaWdodCB3aW5kb3cgKDY1MDBLLCBibHVlKSBib3RoIHN0cmlrZSB5b3VyIHN1YmplY3QuIFlvdXIgY2FtZXJhIGNhbiBzZXQKICAgICAgICAgIG9ubHkgb25lIHdoaXRlIGJhbGFuY2Ug4oCUIGlmIHlvdSB0YXJnZXQgdGhlIHdpbmRvdywgdGhlIGxhbXBzIGdvIG9yYW5nZTsgaWYgeW91IHRhcmdldCB0aGUKICAgICAgICAgIGxhbXBzLCB0aGUgd2luZG93IHR1cm5zIGJsdWUuCiAgICAgICAgPC9QPgoKICAgICAgICA8Q2FsbG91dCB0eXBlPSJ3YXJuaW5nIiB0aXRsZT0iTWl4ZWQgTGlnaHQgV2FybmluZyI+CiAgICAgICAgICBJZiB5b3Ugbm90aWNlIHRoYXQgeW91ciBzdWJqZWN0JmFwb3M7cyBsaXQgc2lkZSBhbmQgc2hhZG93IHNpZGUgYXJlIGRpZmZlcmVudCBDT0xPUlMg4oCUCiAgICAgICAgICBub3QganVzdCBkaWZmZXJlbnQgYnJpZ2h0bmVzc2VzIOKAlCB5b3UgYXJlIGluIGEgbWl4ZWQgbGlnaHQgc2l0dWF0aW9uLiBUaGlzIGlzIG5vdAogICAgICAgICAgY29ycmVjdGFibGUgaW4gcG9zdC4gQWRkcmVzcyBpdCBiZWZvcmUgeW91IHNob290LgogICAgICAgIDwvQ2FsbG91dD4KCiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im15LTYgc3BhY2UteS0zIj4KICAgICAgICAgIHtbCiAgICAgICAgICAgICJFbGltaW5hdGUgdGhlIHdlYWtlciBzb3VyY2Ug4oCUIGNsb3NlIHRoZSBibGluZHMsIHR1cm4gb2ZmIHRoZSBsYW1wLCBtb3ZlIG91dCBvZiB0aGUgem9uZSIsCiAgICAgICAgICAgICJHZWwgeW91ciBhcnRpZmljaWFsIHNvdXJjZSDigJQgYWRkIENUTyBnZWwgdG8gbWF0Y2ggbGFtcHMgdG8gZGF5bGlnaHQsIG9yIENUQiB0byBtYXRjaCBkYXlsaWdodCB0byBsYW1wcyIsCiAgICAgICAgICAgICJMZWFuIGludG8gaXQgZWRpdG9yaWFsbHkg4oCUIHdhcm0gZm9yZWdyb3VuZCBzdWJqZWN0IGFnYWluc3QgY29vbCBiYWNrZ3JvdW5kIHdpbmRvdyBjYW4gcmVhZCBhcyBpbnRlbnRpb25hbCBjaW5lbWF0aWMiLAogICAgICAgICAgICAiUmVwb3NpdGlvbiDigJQgc29tZXRpbWVzIHRoZSBjbGVhbmVzdCBmaXggaXMgc2ltcGx5IG1vdmluZyB0aGUgc3ViamVjdCBvdXQgb2YgdGhlIG1peGVkIHpvbmUgZW50aXJlbHkiLAogICAgICAgICAgXS5tYXAoKGl0ZW0sIGkpID0+ICgKICAgICAgICAgICAgPGRpdiBrZXk9e2l9IGNsYXNzTmFtZT0iZmxleCBnYXAtMyB0ZXh0LVsxNHB4XSB0ZXh0LVsjN0E3NDcwXSI+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LVsjQzlBODRDXSBzaHJpbmstMCBmb250LW1vbm8gdGV4dC1bMTJweF0gbXQtMC41Ij57U3RyaW5nKGkgKyAxKS5wYWRTdGFydCgyLCAiMCIpfTwvc3Bhbj4KICAgICAgICAgICAgICB7aXRlbX0KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApKX0KICAgICAgICA8L2Rpdj4KICAgICAgPC9Cb2R5PgogICAgICA8U2VjdGlvbkRpdmlkZXIgLz4KICAgIDwvPgogICkKfQoK
+import Image from "next/image"
+import { Callout, KeyFact } from "@/components/callout"
+import { ClockDiagram, TriangleDiagram, ContrastZoneBar, KelvinBar } from "@/components/diagrams"
+
+// ── Image URLs ─────────────────────────────────────────────────────────────
+const IMG = {
+  hero: "https://galaxy-prod.tlcdn.com/gen/user_31iPhAyW4gI33CFp2iTeWeTunIo/c9ac2ca8-4f79-4d84-bb22-3ddd2616d052.jpeg",
+  direction: "https://galaxy-prod.tlcdn.com/gen/user_31iPhAyW4gI33CFp2iTeWeTunIo/d11a7fe7-4d4e-4770-98cb-b5d06b5dbfc5.jpeg",
+  contrast: "https://galaxy-prod.tlcdn.com/gen/user_31iPhAyW4gI33CFp2iTeWeTunIo/e75d4b66-1be1-4664-9dca-c8a508ecb23a.jpeg",
+  color: "https://galaxy-prod.tlcdn.com/gen/user_31iPhAyW4gI33CFp2iTeWeTunIo/a1418e36-c6aa-4012-a380-6913ebb7bcf6.jpeg",
+  hardLight: "https://galaxy-prod.tlcdn.com/gen/user_31iPhAyW4gI33CFp2iTeWeTunIo/0fe3a7db-38d6-4867-83f4-0725c07350a2.jpeg",
+  softLight: "https://galaxy-prod.tlcdn.com/gen/user_31iPhAyW4gI33CFp2iTeWeTunIo/6bc56109-ade8-49b0-a2aa-b113b517de25.jpeg",
+  backlit: "https://galaxy-prod.tlcdn.com/gen/user_31iPhAyW4gI33CFp2iTeWeTunIo/37e87608-9dbe-4a77-b62d-83706669421c.jpeg",
+  scene: "https://galaxy-prod.tlcdn.com/gen/user_31iPhAyW4gI33CFp2iTeWeTunIo/715d3302-8c00-42cd-a687-a39b66e6d199.jpeg",
+}
+
+// ── Shared sub-components ───────────────────────────────────────────────────
+
+function ChapterHeader({
+  number, title, subtitle, imageUrl,
+}: { number: string; title: string; subtitle: string; imageUrl: string }) {
+  return (
+    <div className="relative h-[420px] md:h-[520px] flex items-end overflow-hidden">
+      <Image src={imageUrl} alt={title} fill className="object-cover" style={{ opacity: 0.38 }} sizes="100vw" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/60 to-transparent" />
+      <div className="relative z-10 px-8 md:px-16 pb-14">
+        <div
+          className="text-[10px] tracking-[0.4em] uppercase text-[#C9A84C] mb-4"
+          style={{ fontFamily: "monospace" }}
+        >
+          Chapter {number}
+        </div>
+        <h2
+          className="font-serif text-5xl md:text-6xl lg:text-7xl font-light text-[#E8E2D9] leading-[1.05] mb-3"
+        >
+          {title}
+        </h2>
+        <p className="text-[#7A7470] text-lg font-light max-w-xl">{subtitle}</p>
+      </div>
+    </div>
+  )
+}
+
+function Body({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="px-8 md:px-16 lg:px-20 py-16 max-w-[820px]">
+      {children}
+    </div>
+  )
+}
+
+function P({ children }: { children: React.ReactNode }) {
+  return <p className="text-[16.5px] text-[#B8B2A9] leading-[1.85] mb-5">{children}</p>
+}
+
+function H3({ children }: { children: React.ReactNode }) {
+  return (
+    <h3
+      className="font-serif text-2xl md:text-3xl font-light text-[#E8E2D9] mt-14 mb-4 pb-3"
+      style={{ borderBottom: "1px solid #1A1A1A" }}
+    >
+      {children}
+    </h3>
+  )
+}
+
+function AuditStep({ num, title, children }: { num: string; title: string; children: React.ReactNode }) {
+  return (
+    <div className="flex gap-4 mb-6">
+      <div
+        className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-[13px] font-bold mt-0.5"
+        style={{ background: "rgba(201,168,76,0.10)", color: "#C9A84C", fontFamily: "monospace" }}
+      >
+        {num}
+      </div>
+      <div>
+        <div className="text-[14px] font-semibold text-[#E8E2D9] mb-1">{title}</div>
+        <div className="text-[15px] text-[#8A8480] leading-relaxed">{children}</div>
+      </div>
+    </div>
+  )
+}
+
+function SectionDivider() {
+  return (
+    <div className="border-t border-[#111] my-0" />
+  )
+}
+
+function Objectives({ items }: { items: string[] }) {
+  return (
+    <div className="mb-12 p-6 rounded-xl border border-[#181818] bg-[#0A0A0A]">
+      <div
+        className="text-[9px] tracking-[0.35em] uppercase text-[#3A3A3A] mb-4"
+        style={{ fontFamily: "monospace" }}
+      >
+        In this chapter you will learn
+      </div>
+      {items.map((item, i) => (
+        <div key={i} className="flex items-start gap-3 mb-2">
+          <span className="text-[#C9A84C] mt-0.5 text-sm">◆</span>
+          <span className="text-[14px] text-[#8A8480] leading-relaxed">{item}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// ── CHAPTER THREE ───────────────────────────────────────────────────────────
+
+export function ChapterThree() {
+  return (
+    <>
+      <ChapterHeader
+        number="03"
+        title="Contrast — Reading Shadow Ratios"
+        subtitle="The ratio that controls drama, mood, and the emotional register of every image."
+        imageUrl={IMG.contrast}
+      />
+      <Body>
+        <Objectives
+          items={[
+            "Identify four contrast zones by observation alone",
+            "Control contrast ratio on location using available tools",
+            "Match contrast level to the emotional intent of the image",
+          ]}
+        />
+
+        <P>
+          Once you have established direction, your second question is: how dramatic is the
+          difference between the lit and shadow sides? This ratio — the lighting ratio or contrast
+          ratio — determines the emotional temperature of the image more than any other single
+          variable. High contrast reads as dramatic, gritty, and intense. Low contrast reads as
+          soft, gentle, and approachable.
+        </P>
+
+        <ContrastZoneBar />
+
+        <H3>How to Read Contrast</H3>
+        <P>
+          Most photographers instinctively look at the highlights. Invert this habit completely.
+          The shadow side tells you everything. When you assess a scene, look specifically at the
+          darkest area of your subject and ask two questions: Can you see detail there? And how
+          does it compare in brightness to the lit side?
+        </P>
+
+        <div className="grid md:grid-cols-2 gap-4 my-8">
+          <div className="rounded-xl overflow-hidden relative h-[260px]">
+            <Image src={IMG.hardLight} alt="Hard light with sharp shadows" fill className="object-cover" sizes="50vw" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+            <div className="absolute bottom-0 left-0 p-4">
+              <div className="text-[10px] font-mono font-bold text-[#E09B6B] tracking-wider mb-1">HARD LIGHT</div>
+              <div className="text-[12px] text-[#E8E2D9]">Sharp shadow edges, high local contrast</div>
+            </div>
+          </div>
+          <div className="rounded-xl overflow-hidden relative h-[260px]">
+            <Image src={IMG.softLight} alt="Soft light with gentle shadows" fill className="object-cover" sizes="50vw" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+            <div className="absolute bottom-0 left-0 p-4">
+              <div className="text-[10px] font-mono font-bold text-[#6BAE8B] tracking-wider mb-1">SOFT LIGHT</div>
+              <div className="text-[12px] text-[#E8E2D9]">Gradual transitions, flattering graduation</div>
+            </div>
+          </div>
+        </div>
+
+        <H3>The Four Contrast Zones</H3>
+
+        <div className="space-y-4">
+          {[
+            { zone: "Zone 1 — 1:1 Flat", color: "#6BAE8B", desc: "No meaningful shadows. Light comes from all directions equally. Overcast days, open shade, or large softboxes very close to subject. Use for clean commercial beauty, high-key aesthetics, and lifestyle imagery where shadow would compete with a busy scene." },
+            { zone: "Zone 2 — 2:1 Gentle Modeling", color: "#C9A84C", desc: "Visible shadow with full detail throughout. The most common 'natural' portrait ratio — produces the sense of three-dimensionality without drama. Most golden-hour outdoor portraits naturally land in this zone. Commercially safe and universally flattering." },
+            { zone: "Zone 3 — 4:1 Dramatic", color: "#E09B6B", desc: "The shadow side drops roughly two stops below the highlights. Detail exists in shadows but requires attention. This is where editorial portraiture begins — strong depth, character, and presence. Still commercially viable for lifestyle and fashion." },
+            { zone: "Zone 4 — 8:1+ High Drama", color: "#E06B6B", desc: "Shadow side is three or more stops below highlights. Shadow detail is largely lost. Intentional and uncompromising. Used in fine art, dark editorial, and fashion. Not for general commercial use — requires intentionality and editorial context to read as skilled rather than failed." },
+          ].map((item) => (
+            <div key={item.zone} className="p-4 rounded-lg border border-[#181818]"
+              style={{ background: `${item.color}05` }}>
+              <div className="text-[12px] font-semibold mb-2" style={{ color: item.color, fontFamily: "monospace" }}>
+                {item.zone}
+              </div>
+              <p className="text-[14px] text-[#7A7470] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <H3>Controlling Contrast on Location</H3>
+        <P>
+          You have more control over contrast than most beginners realize. The key tools are position,
+          reflection, and occlusion.
+        </P>
+
+        <div className="grid md:grid-cols-2 gap-6 my-6">
+          <div>
+            <div className="text-[11px] font-mono text-[#6BAE8B] tracking-widest mb-3">TO REDUCE CONTRAST</div>
+            <ul className="space-y-2">
+              {[
+                "Move subject into open shade (sky becomes the fill)",
+                "Add a reflector on the shadow side to bounce fill",
+                "Position near a bright wall or ground that bounces upward",
+                "Use subtle fill flash balanced 1–2 stops below ambient",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-[14px] text-[#7A7470]">
+                  <span className="text-[#6BAE8B] mt-1">›</span>{item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <div className="text-[11px] font-mono text-[#E06B6B] tracking-widest mb-3">TO INCREASE CONTRAST</div>
+            <ul className="space-y-2">
+              {[
+                "Move subject farther from any fill source",
+                "Block ambient on shadow side with a dark panel (negative fill)",
+                "Use a smaller window or set the bounce angle",
+                "Position subject closer to light while keeping fill distant",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-[14px] text-[#7A7470]">
+                  <span className="text-[#E06B6B] mt-1">›</span>{item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <Callout type="principle">
+          High contrast is not bad and low contrast is not good. They are tools. The failure
+          is having one without intending it — capturing high contrast because you did not know
+          how to reduce it, or getting flat light because you did not know how to add depth.
+          Intent is everything.
+        </Callout>
+      </Body>
+      <SectionDivider />
+    </>
+  )
+}
+
+// ── CHAPTER FOUR ────────────────────────────────────────────────────────────
+
+export function ChapterFour() {
+  return (
+    <>
+      <ChapterHeader
+        number="04"
+        title="Color — Reading Light Temperature"
+        subtitle="Every source of light has color. Learning to read it changes everything."
+        imageUrl={IMG.color}
+      />
+      <Body>
+        <Objectives
+          items={[
+            "Read color temperature by eye across the key photographic range",
+            "Identify and use the three most important natural light windows",
+            "Recognize and resolve mixed light situations before they appear in your frame",
+          ]}
+        />
+
+        <P>
+          All light has color. This is not a flaw in some sources and a feature in others — it is a
+          fundamental physical property of electromagnetic radiation. Learning to read it is learning
+          to read the room. The color of light shapes skin tones, mood, and the entire emotional
+          palette of your image. Ignoring it is like composing with your eyes half-closed.
+        </P>
+
+        <KelvinBar />
+
+        <H3>The Kelvin Scale for Photographers</H3>
+        <P>
+          Color temperature is measured in Kelvin. Lower numbers are warmer (orange, amber). Higher
+          numbers are cooler (blue, cyan). The relationship is counter-intuitive to beginners, but
+          it becomes second nature quickly: 2700K is your grandmother&apos;s lamp; 6500K is a
+          cloudy gray sky; 10,000K is blue midday shade.
+        </P>
+
+        <div className="space-y-3 my-8">
+          {[
+            { range: "1900–2500K", name: "Candle / Flame", feel: "Deep amber-orange. Intimate and dangerous. Almost cinematic in warmth.", ex: "Fireplace, candle, flame" },
+            { range: "2700–3200K", name: "Tungsten / Incandescent", feel: "Warm orange-yellow. Classic interior domestic light. Flattering on warm skin tones.", ex: "Household bulbs, restaurant lighting" },
+            { range: "3500–4200K", name: "Warm LED / Lower Golden Hour", feel: "Warm to neutral. The beginning of the magic window. Commercial and universally flattering.", ex: "Golden hour start, warm LED panels" },
+            { range: "5000–5500K", name: "Daylight / Electronic Flash", feel: "White, neutral. The calibration reference point. Your camera's AWB targets this range.", ex: "Midday sun, studio flash" },
+            { range: "6000–6500K", name: "Overcast / Open Shade", feel: "Slight blue cast. Clean and modern. Works for cool fashion aesthetics.", ex: "Cloudy days, shaded outdoor areas" },
+            { range: "7000–10000K", name: "Blue Sky / Deep Shade", feel: "Distinctly blue, cold, atmospheric. Melancholic or futuristic depending on use.", ex: "Sky-lit shade, blue hour" },
+          ].map((item) => (
+            <div key={item.range} className="grid grid-cols-[120px_1fr] gap-4 py-3 border-b border-[#141414]">
+              <div>
+                <div className="text-[11px] font-mono text-[#C9A84C]">{item.range}</div>
+                <div className="text-[12px] text-[#5A5550] mt-0.5">{item.name}</div>
+              </div>
+              <div>
+                <p className="text-[14px] text-[#8A8480] leading-relaxed">{item.feel}</p>
+                <p className="text-[12px] text-[#4A4A4A] mt-1">e.g. {item.ex}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <H3>The Three Natural Light Windows</H3>
+
+        <div className="space-y-6 my-8">
+          {[
+            {
+              name: "Golden Hour",
+              time: "30–45 min after sunrise / before sunset",
+              temp: "2500–3500K",
+              color: "#C9A84C",
+              desc: "The hour every photographer chases for good reason. The source is at its lowest angle in the sky, producing long raking shadows that reveal form, and warmth that flatters every skin tone. Contrast is manageable — the low sun creates long soft shadows rather than harsh vertical ones. The catch: it lasts 30–45 minutes, it moves fast, and you must arrive early. Scout before, shoot during.",
+            },
+            {
+              name: "Blue Hour",
+              time: "20–30 min before sunrise / after sunset",
+              temp: "7000–10000K",
+              color: "#6B9AE0",
+              desc: "No direct sun, but the sky remains active — deep blue, even, and atmospheric. Contrast collapses almost entirely. This is the most underused window by intermediate photographers and produces images that feel cinematic and mysterious. Because the light is so diffuse and even, conventional position rules matter less. What matters more: exposure, depth, and the balance between ambient and any artificial sources in the frame.",
+            },
+            {
+              name: "Midday",
+              time: "10am–3pm (clear sky)",
+              temp: "5500–6500K",
+              color: "#E09B6B",
+              desc: "Neutral to cool, near-vertical, high-contrast. The hardest light for portraits. Vertical angle creates deep eye socket shadows, double chins, and 'raccoon eyes.' The color is clinical. Your strategies: find open shade (north-facing walls, covered walkways, overhang), use tall structures to block overhead light and expose the face to reflected wall light, or lean into the harshness deliberately for gritty editorial work.",
+            },
+          ].map((item) => (
+            <div key={item.name} className="p-6 rounded-xl border border-[#181818]"
+              style={{ borderColor: `${item.color}20` }}>
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <div className="text-[13px] font-bold" style={{ color: item.color }}>{item.name}</div>
+                  <div className="text-[12px] text-[#4A4A4A] mt-0.5">{item.time}</div>
+                </div>
+                <div className="text-[11px] font-mono px-2 py-1 rounded"
+                  style={{ background: `${item.color}15`, color: item.color }}>
+                  {item.temp}
+                </div>
+              </div>
+              <p className="text-[14px] text-[#7A7470] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <H3>Mixed Light — The Danger Zone</H3>
+        <P>
+          Mixed light occurs when two sources of different temperatures illuminate your subject
+          simultaneously. The most common scenario: an interior room where tungsten lamps (3200K,
+          orange) and a daylight window (6500K, blue) both strike your subject. Your camera can set
+          only one white balance — if you target the window, the lamps go orange; if you target the
+          lamps, the window turns blue.
+        </P>
+
+        <Callout type="warning" title="Mixed Light Warning">
+          If you notice that your subject&apos;s lit side and shadow side are different COLORS —
+          not just different brightnesses — you are in a mixed light situation. This is not
+          correctable in post. Address it before you shoot.
+        </Callout>
+
+        <div className="my-6 space-y-3">
+          {[
+            "Eliminate the weaker source — close the blinds, turn off the lamp, move out of the zone",
+            "Gel your artificial source — add CTO gel to match lamps to daylight, or CTB to match daylight to lamps",
+            "Lean into it editorially — warm foreground subject against cool background window can read as intentional cinematic",
+            "Reposition — sometimes the cleanest fix is simply moving the subject out of the mixed zone entirely",
+          ].map((item, i) => (
+            <div key={i} className="flex gap-3 text-[14px] text-[#7A7470]">
+              <span className="text-[#C9A84C] shrink-0 font-mono text-[12px] mt-0.5">{String(i + 1).padStart(2, "0")}</span>
+              {item}
+            </div>
+          ))}
+        </div>
+      </Body>
+      <SectionDivider />
+    </>
+  )
+}
